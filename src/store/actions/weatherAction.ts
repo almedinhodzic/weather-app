@@ -20,18 +20,20 @@ export const getWeather = (
     dispatch({
       type: SET_LOADING,
     });
-    const res = await weather.get(`weather/q=${city}&appid=${api_key}`);
+    const res = await weather.get(`/weather?q=${city}&appid=${api_key}`);
+    const data: TodaysWeatherData = res.data;
     dispatch({
       type: GET_WEATHER,
-      payload: res.data,
+      payload: data,
     });
     const { lon, lat } = res.data.coord;
     const weekRes = await weather.get(
-      `onecall?lat=${lat}&lon=${lon}&exclude=minutely, alerts,current&appid=${api_key}`
+      `/onecall?lat=${lat}&lon=${lon}&exclude=minutely,alerts,current&appid=${api_key}`
     );
+    const weekData: WeekData = weekRes.data;
     dispatch({
       type: GET_WEEK,
-      payload: weekRes.data,
+      payload: weekData,
     });
     dispatch({
       type: REMOVE_LOADING,
