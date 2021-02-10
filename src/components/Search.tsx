@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getWeather } from "../store/actions/weatherAction";
 
-const Search = () => {
+const Search: React.FC = () => {
   const [city, setCity] = useState("");
   const dispatch = useDispatch();
 

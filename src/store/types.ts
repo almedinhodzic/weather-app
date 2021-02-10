@@ -38,7 +38,7 @@ export interface TodaysWeatherData {
   sys: {
     type: number;
     id: number;
-    country: number;
+    country: string;
     sunrise: number;
     sunset: number;
   };
