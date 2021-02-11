@@ -24,7 +24,9 @@ const Search: React.FC = () => {
     <div className="search-bar">
       <form onSubmit={onSubmit}>
         <input type="text" name="" id="" onChange={onChange} value={city} />
-        <input type="submit" value="SEARCH" />
+        <button type="submit">
+          <i className="fas fa-search"></i>
+        </button>
       </form>
     </div>
   );

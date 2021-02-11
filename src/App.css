@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 .App {
@@ -21,8 +23,9 @@
 }
 
 .search-bar form input[type="text"] {
-  padding: 0.3rem 3rem;
+  padding: 0.3rem;
   border: none;
+  width: 200px;
 }
 
 .search-bar form input[type="text"]:focus {
@@ -30,14 +33,14 @@
   border: none;
 }
 
-.search-bar form input[type="submit"] {
-  padding: 0.3rem 1rem;
+.search-bar form button[type="submit"] {
+  padding: 0.3rem 1.5rem;
   border: none;
   background: #0077b6;
   color: #fff;
 }
 
-.search-bar form input[type="submit"]:hover {
+.search-bar form button[type="submit"]:hover {
   background: #023e8a;
   cursor: pointer;
 }
@@ -101,7 +104,7 @@ span {
 
 .main-info {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .border {
