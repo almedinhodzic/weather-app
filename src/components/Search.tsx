@@ -8,7 +8,11 @@ const Search: React.FC = () => {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(getWeather(city));
+    if (city.trim() === "") {
+      alert("cant be emptty");
+    } else {
+      dispatch(getWeather(city));
+    }
     setCity("");
   };
 
@@ -17,10 +21,10 @@ const Search: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="search-bar">
       <form onSubmit={onSubmit}>
         <input type="text" name="" id="" onChange={onChange} value={city} />
-        <input type="submit" value="Get Data" />
+        <input type="submit" value="SEARCH" />
       </form>
     </div>
   );

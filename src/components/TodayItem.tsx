@@ -32,38 +32,65 @@ const TodayItem: React.FC<Props> = ({
   const icon = weather.map((item) => item.icon);
   const desc = weather.map((item) => item.main);
   return (
-    <div>
-      <h1>
+    <div className="today-section">
+      <h1 className="city">
         {city}, {country}
       </h1>
       <h2>{moment.unix(date).format("dddd, DD MMMM")}</h2>
-      <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
-      <span>{temp.toFixed()}&#176;</span>
-      <p>{desc}</p>
-      <div>
-        <p>{temp_max.toFixed()}&#176;</p>
-        <p>High</p>
+      <div className="today-main">
+        <div className="today-left">
+          <div className="image">
+            <img
+              src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+              alt="weather-icon"
+            />
+          </div>
+          <div>
+            <span className="main-temp">{temp.toFixed()}&#176;</span>
+            <span className="desc">{desc}</span>
+          </div>
+        </div>
+
+        <div className="today-right">
+          <div className="main-item">
+            <div>
+              <span className="main-info">{temp_max.toFixed()}&#176;</span>
+              <span>High</span>
+            </div>
+            <div>
+              <span className="main-info">{temp_min.toFixed()}&#176;</span>
+              <span>Min</span>
+            </div>
+          </div>
+          <div className="main-item">
+            <div>
+              <span className="main-info">{wind.toFixed()}mph</span>
+              <span>Wind</span>
+            </div>
+            <div>
+              <span className="main-info">{humidity}%</span>
+              <span>Humidity</span>
+            </div>
+          </div>
+          <div className="main-item">
+            <div>
+              <span className="main-info">
+                {moment.unix(sunrise).format("hh:mm")}
+              </span>
+              <span>Sunrise</span>
+            </div>
+            <div>
+              <span className="main-info">
+                {moment.unix(sunset).format("HH:mm")}
+              </span>
+              <span>Sunset</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <p>{temp_min.toFixed()}&#176;</p>
-        <p>Min</p>
-      </div>
-      <div>
-        <p>{wind.toFixed()}mph</p>
-        <p>Wind</p>
-      </div>
-      <div>
-        <p>{humidity}%</p>
-        <p>Humidity</p>
-      </div>
-      <div>
-        <p>{moment.unix(sunrise).format("hh:mm")}</p>
-        <p>Sunrise</p>
-      </div>
-      <div>
-        <p>{moment.unix(sunset).format("HH:mm")}</p>
-        <p>Sunset</p>
-      </div>
+      <div className="border"></div>
+      <div className="border"></div>
+      <div className="border"></div>
     </div>
   );
 };

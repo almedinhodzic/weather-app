@@ -9,14 +9,17 @@ const Week: React.FC = () => {
 
   return (
     <div>
-      {week?.hourly.map((hour) => (
-        <Hourly
-          key={hour.dt}
-          temp={hour.temp}
-          time={hour.dt}
-          weather={hour.weather}
-        />
-      ))}
+      <div className="scroll-weather">
+        {week?.hourly.map((hour) => (
+          <Hourly
+            key={hour.dt}
+            temp={hour.temp}
+            time={hour.dt}
+            weather={hour.weather}
+          />
+        ))}
+      </div>
+
       <h3>Next 7 days</h3>
       {week?.daily.map((day) => (
         <WeekItem

@@ -11,7 +11,7 @@ const App: React.FC = () => {
   const loading = useSelector((state: RootState) => state.weather.loading);
   const data = useSelector((state: RootState) => state.weather);
   return (
-    <div>
+    <div className="App">
       <Search />
       {!data.today || !data.week ? (
         <>Please type valid city name</>
