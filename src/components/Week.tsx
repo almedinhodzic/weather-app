@@ -6,7 +6,7 @@ import WeekItem from "./WeekItem";
 
 const Week: React.FC = () => {
   const week = useSelector((state: RootState) => state.weather.week);
-  console.log(week);
+
   return (
     <div>
       {week?.hourly.map((hour) => (

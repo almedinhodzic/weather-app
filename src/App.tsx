@@ -4,14 +4,25 @@ import Search from "./components/Search";
 import Today from "./components/Today";
 import Week from "./components/Week";
 import "./App.css";
+import { useSelector } from "react-redux";
+import { RootState } from "./store";
 
-const App = () => {
+const App: React.FC = () => {
+  const loading = useSelector((state: RootState) => state.weather.loading);
+  const data = useSelector((state: RootState) => state.weather);
   return (
     <div>
       <Search />
-      <Today />
-      <Week />
-      <Loader />
+      {!data.today || !data.week ? (
+        <>Please type valid city name</>
+      ) : loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Today />
+          <Week />
+        </>
+      )}
     </div>
   );
 };
