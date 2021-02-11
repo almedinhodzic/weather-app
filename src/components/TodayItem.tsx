@@ -16,7 +16,7 @@ type Props = {
   date: number;
 };
 
-const TodayItem = ({
+const TodayItem: React.FC<Props> = ({
   temp,
   weather,
   city,
@@ -28,7 +28,7 @@ const TodayItem = ({
   sunrise,
   sunset,
   date,
-}: Props) => {
+}) => {
   const icon = weather.map((item) => item.icon);
   const desc = weather.map((item) => item.main);
   return (

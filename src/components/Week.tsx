@@ -1,7 +1,36 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
+import Hourly from "./Hourly";
+import WeekItem from "./WeekItem";
 
-const Week = () => {
-  return <div>week</div>;
+const Week: React.FC = () => {
+  const week = useSelector((state: RootState) => state.weather.week);
+  console.log(week);
+  return (
+    <div>
+      {week?.hourly.map((hour) => (
+        <Hourly
+          key={hour.dt}
+          temp={hour.temp}
+          time={hour.dt}
+          weather={hour.weather}
+        />
+      ))}
+      <h3>Next 7 days</h3>
+      {week?.daily.map((day) => (
+        <WeekItem
+          key={day.dt}
+          time={day.dt}
+          weather={day.weather}
+          max={day.temp.max}
+          min={day.temp.min}
+          wind={day.wind_speed}
+          humidity={day.humidity}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default Week;
