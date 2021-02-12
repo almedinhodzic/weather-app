@@ -28,6 +28,10 @@
   width: 200px;
 }
 
+.alert {
+  color: rgb(119, 2, 2);
+}
+
 .search-bar form input[type="text"]:focus {
   outline: none;
   border: none;
@@ -153,4 +157,79 @@ span {
 .hour-temp {
   font-weight: bold;
   font-size: 18px;
+}
+
+.scrool-to-top {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #023e8a;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.scrool-to-top:hover {
+  cursor: pointer;
+  background: #03045e;
+}
+
+.scrool-to-top .icon {
+  margin-top: 10px;
+  animation: scrollTop 0.5s alternate ease infinite;
+}
+
+@keyframes scrollTop {
+  from {
+    transform: translateY(2px);
+  }
+  to {
+    transform: translateY(-1px);
+  }
+}
+
+.scroll-to-bottom {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #023e8a;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.scroll-to-bottom:hover {
+  cursor: pointer;
+  background: #03045e;
+}
+
+.scroll-to-bottom .icon {
+  margin-top: 10px;
+  animation: scrollBottom 0.5s alternate ease infinite;
+}
+
+@keyframes scrollBottom {
+  from {
+    transform: translateY(-1px);
+  }
+  to {
+    transform: translateY(2px);
+  }
+}
+
+.scroll-container {
+  position: absolute;
+  top: 12px;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-container h3 {
+  margin-bottom: 10px;
 }

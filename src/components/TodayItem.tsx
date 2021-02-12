@@ -31,6 +31,7 @@ const TodayItem: React.FC<Props> = ({
 }) => {
   const icon = weather.map((item) => item.icon);
   const desc = weather.map((item) => item.main);
+
   return (
     <div className="today-section">
       <h1 className="city">
@@ -55,11 +56,11 @@ const TodayItem: React.FC<Props> = ({
           <div className="main-item">
             <div>
               <span className="main-info">{temp_max.toFixed()}&#176;</span>
-              <span>High</span>
+              <span>Day High</span>
             </div>
             <div>
               <span className="main-info">{temp_min.toFixed()}&#176;</span>
-              <span>Min</span>
+              <span>Day Min</span>
             </div>
           </div>
           <div className="main-item">

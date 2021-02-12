@@ -6,6 +6,8 @@ import Week from "./components/Week";
 import "./App.css";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
+import ScroolToTop from "./components/ScroolToTop";
+import ScrollBottom from "./components/ScrollBottom";
 
 const App: React.FC = () => {
   const loading = useSelector((state: RootState) => state.weather.loading);
@@ -19,8 +21,10 @@ const App: React.FC = () => {
         <Loader />
       ) : (
         <>
+          <ScrollBottom />
           <Today />
           <Week />
+          <ScroolToTop />
         </>
       )}
     </div>
