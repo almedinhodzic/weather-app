@@ -154,6 +154,7 @@ span {
   border-radius: 3px;
 }
 
+.week-info-main,
 .hour-temp {
   font-weight: bold;
   font-size: 18px;
@@ -232,4 +233,25 @@ span {
 
 .scroll-container h3 {
   margin-bottom: 10px;
+}
+
+.week {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ade8f4;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.week-header {
+  margin: 27px 0 15px 0;
+}
+
+.entry-header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
 }

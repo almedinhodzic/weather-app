@@ -16,7 +16,7 @@ const App: React.FC = () => {
     <div className="App">
       <Search />
       {!data.today || !data.week ? (
-        <>Please type valid city name</>
+        <h1 className="entry-header">Please type valid city name</h1>
       ) : loading ? (
         <Loader />
       ) : (

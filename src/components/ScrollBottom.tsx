@@ -1,15 +1,14 @@
 import React from "react";
 
-const ScrollBottom: React.FC = () => {
-  const scrollToBottom = () =>
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
+type Props = {
+  goToWeekSection?: () => void;
+};
+
+const ScrollBottom: React.FC<Props> = ({ goToWeekSection }) => {
   return (
     <div className="scroll-container">
-      <h3>Go To Next 7 Forecast</h3>
-      <div onClick={scrollToBottom} className="scroll-to-bottom">
+      <h3>Go To Next 7 Days Forecast</h3>
+      <div onClick={goToWeekSection} className="scroll-to-bottom">
         <i className="icon fas fa-arrow-down"></i>
       </div>
     </div>

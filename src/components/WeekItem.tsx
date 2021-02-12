@@ -21,28 +21,28 @@ const WeekItem: React.FC<Props> = ({
 }) => {
   const icon = weather.map((item) => item.icon);
   return (
-    <div>
+    <div className="week">
       <div>
-        <p>{moment.unix(time).format("ddd")}</p>
+        <p className="week-info-main">{moment.unix(time).format("ddd")}</p>
         <p>{moment.unix(time).format("DD/MM")}</p>
       </div>
       <div>
         <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
       </div>
       <div>
-        <p>{min.toFixed()}&#176;</p>
+        <p className="week-info-main">{min.toFixed()}&#176;</p>
         <p>Low</p>
       </div>
       <div>
-        <p>{max.toFixed()}&#176;</p>
+        <p className="week-info-main">{max.toFixed()}&#176;</p>
         <p>High</p>
       </div>
       <div>
-        <p>{wind.toFixed()}mph</p>
+        <p className="week-info-main">{wind.toFixed()}mph</p>
         <p>Wind</p>
       </div>
       <div>
-        <p>{humidity}%</p>
+        <p className="week-info-main">{humidity}%</p>
         <p>Humidity</p>
       </div>
     </div>
