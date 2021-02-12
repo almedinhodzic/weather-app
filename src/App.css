@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-.search-bar form input[type="submit"]:focus {
+.search-bar form button[type="submit"]:focus {
   outline: none;
   border: none;
 }
