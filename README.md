@@ -42,7 +42,7 @@ First download project <br/>
 
 ## Live Demo
 
-- Website - [Froom](https://froom-best.herokuapp.com/)
+- Website - [Froom](https://weather-app-global.netlify.app/)
 
 [Back To The Top](#WEATHER)
 
