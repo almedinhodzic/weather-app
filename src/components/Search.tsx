@@ -4,8 +4,8 @@ import { RootState } from "../store";
 import { getWeather } from "../store/actions/weatherAction";
 
 const Search: React.FC = () => {
-  const [city, setCity] = useState("");
-  const [alert, setAlert] = useState(false);
+  const [city, setCity] = useState<string>("");
+  const [alert, setAlert] = useState<boolean>(false);
   const dispatch = useDispatch();
   const error = useSelector((state: RootState) => state.weather.error);
 

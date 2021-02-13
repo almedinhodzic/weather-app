@@ -255,3 +255,61 @@ span {
   text-align: center;
   margin-top: 20px;
 }
+
+@media (max-width: 500px) {
+  .App {
+    padding: 1rem;
+  }
+  .today-main {
+    flex-direction: column;
+  }
+  .main-temp {
+    font-size: 100px;
+  }
+  .today-right,
+  .today-left {
+    border: none;
+  }
+  .today-right {
+    justify-content: space-between;
+  }
+  .today-right div {
+    padding: 5px;
+  }
+  .week {
+    padding: 0 0.5rem;
+  }
+  .week p {
+    font-size: 12px;
+  }
+  .week-icon {
+    width: 70px;
+    height: 70px;
+  }
+  .week .week-info-main {
+    font-size: 16px;
+  }
+  .scroll-container {
+    top: 50px;
+    right: 5%;
+  }
+  .city {
+    margin-top: 70px;
+  }
+  .scroll-container h3 {
+    font-size: 14px;
+  }
+  .week:last-child {
+    margin-bottom: 40px;
+  }
+  .entry-header {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-container {
+    top: 70px;
+    right: 5%;
+  }
+}

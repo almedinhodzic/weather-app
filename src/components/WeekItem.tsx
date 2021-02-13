@@ -27,7 +27,11 @@ const WeekItem: React.FC<Props> = ({
         <p>{moment.unix(time).format("DD/MM")}</p>
       </div>
       <div>
-        <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
+        <img
+          src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+          alt="weather icon"
+          className="week-icon"
+        />
       </div>
       <div>
         <p className="week-info-main">{min.toFixed()}&#176;</p>
